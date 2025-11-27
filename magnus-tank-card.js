@@ -1,4 +1,4 @@
-class ESPHATankDashboardCard extends HTMLElement {
+class MagnusTankCard extends HTMLElement {
 
   setConfig(config) {
     if (!config.tank_entity || !config.battery_entity) {
@@ -133,4 +133,4 @@ class ESPHATankDashboardCard extends HTMLElement {
   }
 }
 
-customElements.define("esp-ha-tank-dashboard-card", ESPHATankDashboardCard);
+customElements.define("magnus-tank-card", MagnusTankCard);
