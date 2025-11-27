@@ -95,7 +95,7 @@ class ESPHATankDashboardCard extends HTMLElement {
         renderer: "svg",
         loop: false,
         autoplay: false,
-        path: "/hacsfiles/magnus-tank-card/animations/samplyytt.json"   // Hardcoded JSON
+        path: "/hacsfiles/magnus-tank-card/animations/tank.json"   // Hardcoded JSON
       });
 
       this.batteryAnimation = lottie.loadAnimation({
