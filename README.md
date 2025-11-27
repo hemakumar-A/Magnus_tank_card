@@ -10,9 +10,7 @@
 
 ## Example Card Config
 ```yaml
-type: custom:esp-ha-tank-dashboard-card
+type: custom:magnus-tank-card
 tank_entity: sensor.water_tank_sensor_water_tank_level
 battery_entity: sensor.water_tank_sensor_water_tank_battery
-tank_json: /local/lottie/samplyytt.json
-battery_json: /local/lottie/battery.json
 
