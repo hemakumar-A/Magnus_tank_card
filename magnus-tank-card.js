@@ -29,6 +29,11 @@ class MagnusTankCard extends HTMLElement {
 
       .lottie-container {
         width: 100%;
+        height: 260px;          /* Required for visibility */
+      }
+
+      .block.battery .lottie-container {
+        height: 160px;          /* Battery animation height */
       }
 
       .label {
@@ -90,12 +95,19 @@ class MagnusTankCard extends HTMLElement {
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js";
 
     script.onload = () => {
+
+      console.log("Lottie script loaded, loading animations...");
+
       this.tankAnimation = lottie.loadAnimation({
         container: this.tankContainer,
         renderer: "svg",
         loop: false,
         autoplay: false,
-        path: "/hacsfiles/magnus-tank-card/animations/tank.json"   // Hardcoded JSON
+        path: "/hacsfiles/magnus-tank-card/animations/tank.json"
+      });
+
+      this.tankAnimation.addEventListener("data_failed", () => {
+        console.error("Failed to load tank.json animation");
       });
 
       this.batteryAnimation = lottie.loadAnimation({
@@ -103,8 +115,13 @@ class MagnusTankCard extends HTMLElement {
         renderer: "svg",
         loop: false,
         autoplay: false,
-        path: "/hacsfiles/magnus-tank-card/animations/battery.json" // Hardcoded JSON
+        path: "/hacsfiles/magnus-tank-card/animations/battery.json"
       });
+
+      this.batteryAnimation.addEventListener("data_failed", () => {
+        console.error("Failed to load battery.json animation");
+      });
+
     };
 
     this.shadowRoot.appendChild(script);
