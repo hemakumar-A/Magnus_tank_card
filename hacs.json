@@ -1,0 +1,9 @@
+{
+  "name": "Magnus Tank Card",
+  "content_in_root": true,
+  "filename": "esp-ha-tank-dashboard-card.js",
+  "render_readme": true,
+  "domains": ["frontend"],
+  "iot_class": "local_polling",
+  "country": "GLOBAL"
+}
